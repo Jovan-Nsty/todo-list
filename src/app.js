@@ -1,7 +1,7 @@
-import { createTodo } from './todoCreate.js';
-import { addTodoToArray, todosArray } from './todoManager.js';
-import { printTodoArray } from './todoPrinter.js';
-import { createTodoItem } from './todoItemCreate.js';
+import { createTodo } from './todo/todoCreate.js';
+import { addTodoToArray, todosArray } from './todo/todoManager.js';
+import { printTodoArray } from './todo/todoPrinter.js';
+import { createTodoItem } from './todo/todoItemCreate.js';
 
 const todo = createTodo('TODO');
 
