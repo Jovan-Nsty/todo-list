@@ -2,18 +2,10 @@ import { createTodo } from './todo/todoCreate.js';
 import { addTodoToArray, todosArray } from './todo/todoManager.js';
 import { printTodoArray } from './todo/todoPrinter.js';
 import { createTodoItem } from './todo/todoItemCreate.js';
+import { createDefaultTodo } from './todo/defaultProject.js';
 
-const todo = createTodo('TODO');
+// Creating a default 'personal' todo list on page load
+createDefaultTodo();
 
-const todoItem = createTodoItem();
-todoItem.setTitle('todo item');
-todoItem.setDescription('this is my todo item');
-todoItem.setDueDate('feb 22 2024');
-todoItem.setPriority('medium');
-
-todo.setTaskListItem(todoItem);
-
-addTodoToArray(todo);
-
+// Print all available todo projects
 printTodoArray(todosArray);
-todo.getTaskList();

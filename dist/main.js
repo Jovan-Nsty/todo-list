@@ -16,7 +16,17 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_todoCreate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo/todoCreate.js */ \"./src/todo/todoCreate.js\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todo/todoPrinter.js */ \"./src/todo/todoPrinter.js\");\n/* harmony import */ var _todo_todoItemCreate_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/todoItemCreate.js */ \"./src/todo/todoItemCreate.js\");\n\n\n\n\n\nconst todo = (0,_todo_todoCreate_js__WEBPACK_IMPORTED_MODULE_0__.createTodo)('TODO');\n\nconst todoItem = (0,_todo_todoItemCreate_js__WEBPACK_IMPORTED_MODULE_3__.createTodoItem)();\ntodoItem.setTitle('todo item');\ntodoItem.setDescription('this is my todo item');\ntodoItem.setDueDate('feb 22 2024');\ntodoItem.setPriority('medium');\n\ntodo.setTaskListItem(todoItem);\n\n(0,_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.addTodoToArray)(todo);\n\n(0,_todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\ntodo.getTaskList();\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_todoCreate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo/todoCreate.js */ \"./src/todo/todoCreate.js\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todo/todoPrinter.js */ \"./src/todo/todoPrinter.js\");\n/* harmony import */ var _todo_todoItemCreate_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/todoItemCreate.js */ \"./src/todo/todoItemCreate.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_4__.createDefaultTodo)();\n\n// Print all available todo projects\n(0,_todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/todo/defaultProject.js":
+/*!************************************!*\
+  !*** ./src/todo/defaultProject.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDefaultTodo: () => (/* binding */ createDefaultTodo)\n/* harmony export */ });\n/* harmony import */ var _todoCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todoCreate */ \"./src/todo/todoCreate.js\");\n/* harmony import */ var _todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoManager */ \"./src/todo/todoManager.js\");\n\n\n\nfunction createDefaultTodo() {\n    const todo = (0,_todoCreate__WEBPACK_IMPORTED_MODULE_0__.createTodo)('Personal');\n    (0,_todoManager__WEBPACK_IMPORTED_MODULE_1__.addTodoToArray)(todo);\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/defaultProject.js?");
 
 /***/ }),
 
