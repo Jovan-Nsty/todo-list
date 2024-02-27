@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+html, body {
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    height: 100%;
+}
+
+#side-panel {
+    background-color: blueviolet;
+    width: 250px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#todo-project-list-btn {
+    height: 50px;
+    width: 250px;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#todo-title, #todo-list-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: chocolate;
+}
+
+#main-panel {
+    background-color: brown;
+    flex: 2;
+}

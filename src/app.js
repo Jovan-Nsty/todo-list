@@ -1,7 +1,6 @@
-import { createTodo } from './todo/todoCreate.js';
+import './style.css';
 import { addTodoToArray, todosArray } from './todo/todoManager.js';
 import { printTodoArray } from './todo/todoPrinter.js';
-import { createTodoItem } from './todo/todoItemCreate.js';
 import { createDefaultTodo } from './todo/defaultProject.js';
 import { createCustomTodo } from './todo/customProject.js';
 
