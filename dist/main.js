@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/UIComponents/todoPrinter.js":
+/*!*****************************************!*\
+  !*** ./src/UIComponents/todoPrinter.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    for (const todo of array) {\n        const getList = document.getElementById('project-list');\n        const makeListItem = document.createElement('li');\n        const makeAnchor = document.createElement('a');\n\n        makeAnchor.textContent = todo.getTodoTitle();\n        makeListItem.appendChild(makeAnchor);\n        getList.appendChild(makeListItem);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/todoPrinter.js?");
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todo/todoPrinter.js */ \"./src/todo/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todo/customProject.js */ \"./src/todo/customProject.js\");\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Creating custom todo projects on page load (beta)\n(0,_todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__.createCustomTodo)('custom1');\n(0,_todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__.createCustomTodo)('custom2');\n\n// Print all available todo projects\n(0,_todo_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _UIComponents_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIComponents/todoPrinter.js */ \"./src/UIComponents/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todo/customProject.js */ \"./src/todo/customProject.js\");\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Creating custom todo projects on page load (beta)\n(0,_todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__.createCustomTodo)('custom1');\n(0,_todo_customProject_js__WEBPACK_IMPORTED_MODULE_4__.createCustomTodo)('custom2');\n\n// Print all available todo projects\n(0,_UIComponents_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
 
 /***/ }),
 
@@ -157,16 +167,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   addTodoToArray: () => (/* binding */ addTodoToArray),\n/* harmony export */   todosArray: () => (/* binding */ todosArray)\n/* harmony export */ });\nlet todosArray = [];\n\nconst addTodoToArray = obj => {\n    todosArray.push(obj);\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/todoManager.js?");
-
-/***/ }),
-
-/***/ "./src/todo/todoPrinter.js":
-/*!*********************************!*\
-  !*** ./src/todo/todoPrinter.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    for (const todo of array) {\n        console.log(todo.getTodoTitle());\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/todoPrinter.js?");
 
 /***/ })
 
