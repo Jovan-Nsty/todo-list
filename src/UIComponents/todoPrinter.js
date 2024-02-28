@@ -5,7 +5,7 @@ export const printTodoArray = array => {
     for (const todo of array) {
         const makeListItem = document.createElement('li');
         const makeAnchor = document.createElement('a');
-        makeListItem.setAttribute('class','li-item');
+        makeListItem.classList.add('li-item');
 
         makeAnchor.textContent = todo.getTodoTitle();
         makeListItem.appendChild(makeAnchor);

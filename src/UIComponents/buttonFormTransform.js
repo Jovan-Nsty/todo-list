@@ -6,7 +6,7 @@ button.addEventListener('click', () => {
     form.style.display = 'block';
 })
 
-document.body.addEventListener("click", event => {
+document.body.addEventListener('click', event => {
     if (event.target !== form && event.target !== button) {
         form.style.display = 'none';
         button.style.display = 'block';

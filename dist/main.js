@@ -125,7 +125,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*************************************************/
 /***/ (() => {
 
-eval("const button = document.getElementById('todo-add-btn');\nconst form = document.getElementById('todo-name');\n\nbutton.addEventListener('click', () => {\n    button.style.display = 'none';\n    form.style.display = 'block';\n})\n\ndocument.body.addEventListener(\"click\", event => {\n    if (event.target !== form && event.target !== button) {\n        form.style.display = 'none';\n        button.style.display = 'block';\n    }\n})\n\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/buttonFormTransform.js?");
+eval("const button = document.getElementById('todo-add-btn');\nconst form = document.getElementById('todo-name');\n\nbutton.addEventListener('click', () => {\n    button.style.display = 'none';\n    form.style.display = 'block';\n})\n\ndocument.body.addEventListener('click', event => {\n    if (event.target !== form && event.target !== button) {\n        form.style.display = 'none';\n        button.style.display = 'block';\n    }\n})\n\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/buttonFormTransform.js?");
 
 /***/ }),
 
@@ -147,7 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    const getList = document.getElementById('project-todo-list');\n    getList.textContent = '';\n\n    for (const todo of array) {\n        const makeListItem = document.createElement('li');\n        const makeAnchor = document.createElement('a');\n        makeListItem.setAttribute('class','li-item');\n\n        makeAnchor.textContent = todo.getTodoTitle();\n        makeListItem.appendChild(makeAnchor);\n        getList.appendChild(makeListItem);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/todoPrinter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    const getList = document.getElementById('project-todo-list');\n    getList.textContent = '';\n\n    for (const todo of array) {\n        const makeListItem = document.createElement('li');\n        const makeAnchor = document.createElement('a');\n        makeListItem.classList.add('li-item');\n\n        makeAnchor.textContent = todo.getTodoTitle();\n        makeListItem.appendChild(makeAnchor);\n        getList.appendChild(makeListItem);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/todoPrinter.js?");
 
 /***/ }),
 
