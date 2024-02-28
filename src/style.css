@@ -37,6 +37,10 @@ html, body {
     justify-content: center;
 }
 
+#todo-name {
+    display: none;
+}
+
 #todo-title, #todo-list-name {
     display: flex;
     justify-content: center;

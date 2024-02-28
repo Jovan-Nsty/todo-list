@@ -3,6 +3,7 @@ import { addTodoToArray, todosArray } from './todo/todoManager.js';
 import { printTodoArray } from './UIComponents/todoPrinter.js';
 import { createDefaultTodo } from './todo/defaultProject.js';
 import { createCustomTodo } from './todo/customProject.js';
+import './UIComponents/buttonFormTransform.js';
 
 // Creating a default 'personal' todo list on page load
 createDefaultTodo();
