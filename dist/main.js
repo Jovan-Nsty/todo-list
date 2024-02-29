@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDelBtn: () => (/* binding */ createDelBtn)\n/* harmony export */ });\nfunction createDelBtn() {\n    const itemList = document.querySelectorAll('.li-item');\n\n    for(let i = 1; i < itemList.length; i++) {\n        const createBtn = document.createElement('button');\n        createBtn.classList.add('del-btn');\n        createBtn.textContent = 'x';\n        itemList[i].dataset.number = i;\n        itemList[i].appendChild(createBtn);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/createDeleteButtons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDelBtn: () => (/* binding */ createDelBtn)\n/* harmony export */ });\nfunction createDelBtn() {\n    const todoList = document.querySelectorAll('.li-item');\n\n    for(let i = 1; i < todoList.length; i++) {\n        const createBtn = document.createElement('button');\n        createBtn.classList.add('del-btn');\n        createBtn.textContent = 'x';\n        todoList[i].dataset.number = i;\n        todoList[i].appendChild(createBtn);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/createDeleteButtons.js?");
 
 /***/ }),
 
