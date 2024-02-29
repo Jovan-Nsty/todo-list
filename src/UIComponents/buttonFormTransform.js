@@ -8,7 +8,11 @@ button.addEventListener('click', () => {
 
 document.body.addEventListener('click', event => {
     if (event.target !== form && event.target !== button) {
-        form.style.display = 'none';
-        button.style.display = 'block';
+        closeFormOnSubmit();
     }
 })
+
+export function closeFormOnSubmit() {
+    form.style.display = 'none';
+    button.style.display = 'block';
+}
