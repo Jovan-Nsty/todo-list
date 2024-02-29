@@ -120,13 +120,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/UIComponents/createDeleteButtons.js":
+/*!*************************************************!*\
+  !*** ./src/UIComponents/createDeleteButtons.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDelBtn: () => (/* binding */ createDelBtn)\n/* harmony export */ });\nfunction createDelBtn() {\n    const itemList = document.querySelectorAll('.li-item');\n\n    for(let i = 1; i < itemList.length; i++) {\n        const createBtn = document.createElement('button');\n        createBtn.classList.add('del-btn');\n        createBtn.textContent = 'x';\n        itemList[i].dataset.number = i;\n        itemList[i].appendChild(createBtn);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/createDeleteButtons.js?");
+
+/***/ }),
+
 /***/ "./src/UIComponents/retrieveFormValueAndUpdateDOM.js":
 /*!***********************************************************!*\
   !*** ./src/UIComponents/retrieveFormValueAndUpdateDOM.js ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_customProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todo/customProject */ \"./src/todo/customProject.js\");\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buttonFormTransform */ \"./src/UIComponents/buttonFormTransform.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/todoPrinter.js\");\n\n\n\n\n\nconst form = document.getElementById('todo-form');\n\nform.addEventListener('submit', event => {\n    event.preventDefault();\n\n    const inputValue = document.getElementById('todo-name').value;\n    (0,_todo_customProject__WEBPACK_IMPORTED_MODULE_0__.createCustomTodo)(inputValue);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_3__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n    document.getElementById(\"todo-name\").value = \"\";\n    (0,_buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__.closeFormOnSubmit)();\n});\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/retrieveFormValueAndUpdateDOM.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_customProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todo/customProject */ \"./src/todo/customProject.js\");\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buttonFormTransform */ \"./src/UIComponents/buttonFormTransform.js\");\n/* harmony import */ var _createDeleteButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./createDeleteButtons */ \"./src/UIComponents/createDeleteButtons.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/todoPrinter.js\");\n\n\n\n\n\n\nconst form = document.getElementById('todo-form');\n\nform.addEventListener('submit', event => {\n    event.preventDefault();\n\n    const inputValue = document.getElementById('todo-name').value;\n    (0,_todo_customProject__WEBPACK_IMPORTED_MODULE_0__.createCustomTodo)(inputValue);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_4__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n    (0,_createDeleteButtons__WEBPACK_IMPORTED_MODULE_3__.createDelBtn)();\n\n    document.getElementById(\"todo-name\").value = \"\";\n    (0,_buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__.closeFormOnSubmit)();\n});\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/retrieveFormValueAndUpdateDOM.js?");
 
 /***/ }),
 
