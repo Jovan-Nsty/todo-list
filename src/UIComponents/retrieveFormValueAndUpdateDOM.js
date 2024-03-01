@@ -1,7 +1,7 @@
 import { createCustomTodo } from "../todo/customProject";
 import { todosArray } from "../todo/todoManager";
 import { closeFormOnSubmit } from "./buttonFormTransform";
-import { createDelBtn } from "./createDeleteButtons";
+import { createDelBtn } from "./manageTodoListDeleteButtons";
 import { printTodoArray } from "./todoPrinter";
 
 const form = document.getElementById('todo-form');
