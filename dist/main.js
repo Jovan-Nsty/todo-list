@@ -110,43 +110,43 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/UIComponents/buttonFormTransform.js":
-/*!*************************************************!*\
-  !*** ./src/UIComponents/buttonFormTransform.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   closeFormOnSubmit: () => (/* binding */ closeFormOnSubmit)\n/* harmony export */ });\nconst button = document.getElementById('todo-add-btn');\nconst form = document.getElementById('todo-name');\n\nbutton.addEventListener('click', () => {\n    button.style.display = 'none';\n    form.style.display = 'block';\n})\n\ndocument.body.addEventListener('click', event => {\n    if (event.target !== form && event.target !== button) {\n        closeFormOnSubmit();\n    }\n})\n\nfunction closeFormOnSubmit() {\n    form.style.display = 'none';\n    button.style.display = 'block';\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/buttonFormTransform.js?");
-
-/***/ }),
-
-/***/ "./src/UIComponents/manageTodoListDeleteButtons.js":
-/*!*********************************************************!*\
-  !*** ./src/UIComponents/manageTodoListDeleteButtons.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDelBtn: () => (/* binding */ createDelBtn)\n/* harmony export */ });\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/todoPrinter.js\");\n\n\n\nfunction createDelBtn() {\n    const todoList = document.querySelectorAll('.li-item');\n\n    for(let i = 1; i < todoList.length; i++) {\n        const createBtn = document.createElement('button');\n        createBtn.classList.add('del-btn');\n        createBtn.textContent = 'x';\n        todoList[i].appendChild(createBtn);\n\n        createBtn.addEventListener('click', () => {\n            updateTodoList(i);\n        })\n    }\n}\n\nfunction updateTodoList(index) {\n    (0,_todo_todoManager__WEBPACK_IMPORTED_MODULE_0__.deleteTodoFromArray)(index);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_1__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_0__.todosArray);\n    createDelBtn();\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/manageTodoListDeleteButtons.js?");
-
-/***/ }),
-
-/***/ "./src/UIComponents/retrieveFormValueAndUpdateDOM.js":
+/***/ "./src/UIComponents/SidePanel/buttonFormTransform.js":
 /*!***********************************************************!*\
-  !*** ./src/UIComponents/retrieveFormValueAndUpdateDOM.js ***!
+  !*** ./src/UIComponents/SidePanel/buttonFormTransform.js ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_customProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todo/customProject */ \"./src/todo/customProject.js\");\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buttonFormTransform */ \"./src/UIComponents/buttonFormTransform.js\");\n/* harmony import */ var _manageTodoListDeleteButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./manageTodoListDeleteButtons */ \"./src/UIComponents/manageTodoListDeleteButtons.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/todoPrinter.js\");\n\n\n\n\n\n\nconst form = document.getElementById('todo-form');\n\nform.addEventListener('submit', event => {\n    event.preventDefault();\n\n    const inputValue = document.getElementById('todo-name').value;\n    (0,_todo_customProject__WEBPACK_IMPORTED_MODULE_0__.createCustomTodo)(inputValue);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_4__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n    (0,_manageTodoListDeleteButtons__WEBPACK_IMPORTED_MODULE_3__.createDelBtn)();\n\n    document.getElementById(\"todo-name\").value = \"\";\n    (0,_buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__.closeFormOnSubmit)();\n});\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/retrieveFormValueAndUpdateDOM.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   closeFormOnSubmit: () => (/* binding */ closeFormOnSubmit)\n/* harmony export */ });\nconst button = document.getElementById('todo-add-btn');\nconst form = document.getElementById('todo-name');\n\nbutton.addEventListener('click', () => {\n    button.style.display = 'none';\n    form.style.display = 'block';\n})\n\ndocument.body.addEventListener('click', event => {\n    if (event.target !== form && event.target !== button) {\n        closeFormOnSubmit();\n    }\n})\n\nfunction closeFormOnSubmit() {\n    form.style.display = 'none';\n    button.style.display = 'block';\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/SidePanel/buttonFormTransform.js?");
 
 /***/ }),
 
-/***/ "./src/UIComponents/todoPrinter.js":
-/*!*****************************************!*\
-  !*** ./src/UIComponents/todoPrinter.js ***!
-  \*****************************************/
+/***/ "./src/UIComponents/SidePanel/manageTodoListDeleteButtons.js":
+/*!*******************************************************************!*\
+  !*** ./src/UIComponents/SidePanel/manageTodoListDeleteButtons.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    const getList = document.getElementById('project-todo-list');\n    getList.textContent = '';\n\n    for (const todo of array) {\n        const makeListItem = document.createElement('li');\n        const makeAnchor = document.createElement('a');\n        makeListItem.classList.add('li-item');\n\n        makeAnchor.textContent = todo.getTodoTitle();\n        makeListItem.appendChild(makeAnchor);\n        getList.appendChild(makeListItem);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/todoPrinter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createDelBtn: () => (/* binding */ createDelBtn)\n/* harmony export */ });\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/SidePanel/todoPrinter.js\");\n\n\n\nfunction createDelBtn() {\n    const todoList = document.querySelectorAll('.li-item');\n\n    for(let i = 1; i < todoList.length; i++) {\n        const createBtn = document.createElement('button');\n        createBtn.classList.add('del-btn');\n        createBtn.textContent = 'x';\n        todoList[i].appendChild(createBtn);\n\n        createBtn.addEventListener('click', () => {\n            updateTodoList(i);\n        })\n    }\n}\n\nfunction updateTodoList(index) {\n    (0,_todo_todoManager__WEBPACK_IMPORTED_MODULE_0__.deleteTodoFromArray)(index);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_1__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_0__.todosArray);\n    createDelBtn();\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/SidePanel/manageTodoListDeleteButtons.js?");
+
+/***/ }),
+
+/***/ "./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js":
+/*!*********************************************************************!*\
+  !*** ./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo_customProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../todo/customProject */ \"./src/todo/customProject.js\");\n/* harmony import */ var _todo_todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../todo/todoManager */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buttonFormTransform */ \"./src/UIComponents/SidePanel/buttonFormTransform.js\");\n/* harmony import */ var _manageTodoListDeleteButtons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./manageTodoListDeleteButtons */ \"./src/UIComponents/SidePanel/manageTodoListDeleteButtons.js\");\n/* harmony import */ var _todoPrinter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todoPrinter */ \"./src/UIComponents/SidePanel/todoPrinter.js\");\n\n\n\n\n\n\nconst form = document.getElementById('todo-form');\n\nform.addEventListener('submit', event => {\n    event.preventDefault();\n\n    const inputValue = document.getElementById('todo-name').value;\n    (0,_todo_customProject__WEBPACK_IMPORTED_MODULE_0__.createCustomTodo)(inputValue);\n    (0,_todoPrinter__WEBPACK_IMPORTED_MODULE_4__.printTodoArray)(_todo_todoManager__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n    (0,_manageTodoListDeleteButtons__WEBPACK_IMPORTED_MODULE_3__.createDelBtn)();\n\n    document.getElementById(\"todo-name\").value = \"\";\n    (0,_buttonFormTransform__WEBPACK_IMPORTED_MODULE_2__.closeFormOnSubmit)();\n});\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js?");
+
+/***/ }),
+
+/***/ "./src/UIComponents/SidePanel/todoPrinter.js":
+/*!***************************************************!*\
+  !*** ./src/UIComponents/SidePanel/todoPrinter.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   printTodoArray: () => (/* binding */ printTodoArray)\n/* harmony export */ });\nconst printTodoArray = array => {\n    const getList = document.getElementById('project-todo-list');\n    getList.textContent = '';\n\n    for (const todo of array) {\n        const makeListItem = document.createElement('li');\n        const makeAnchor = document.createElement('a');\n        makeListItem.classList.add('li-item');\n\n        makeAnchor.textContent = todo.getTodoTitle();\n        makeListItem.appendChild(makeAnchor);\n        getList.appendChild(makeListItem);\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/SidePanel/todoPrinter.js?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _UIComponents_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIComponents/todoPrinter.js */ \"./src/UIComponents/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _UIComponents_buttonFormTransform_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UIComponents/buttonFormTransform.js */ \"./src/UIComponents/buttonFormTransform.js\");\n/* harmony import */ var _UIComponents_retrieveFormValueAndUpdateDOM_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UIComponents/retrieveFormValueAndUpdateDOM.js */ \"./src/UIComponents/retrieveFormValueAndUpdateDOM.js\");\n\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Print all available todo projects\n(0,_UIComponents_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIComponents/SidePanel/todoPrinter.js */ \"./src/UIComponents/SidePanel/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _UIComponents_SidePanel_buttonFormTransform_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UIComponents/SidePanel/buttonFormTransform.js */ \"./src/UIComponents/SidePanel/buttonFormTransform.js\");\n/* harmony import */ var _UIComponents_SidePanel_retrieveFormValueAndUpdateDOM_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js */ \"./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js\");\n\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Print all available todo projects\n(0,_UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
 
 /***/ }),
 

@@ -1,5 +1,5 @@
-import { createCustomTodo } from "../todo/customProject";
-import { todosArray } from "../todo/todoManager";
+import { createCustomTodo } from "../../todo/customProject";
+import { todosArray } from "../../todo/todoManager";
 import { closeFormOnSubmit } from "./buttonFormTransform";
 import { createDelBtn } from "./manageTodoListDeleteButtons";
 import { printTodoArray } from "./todoPrinter";

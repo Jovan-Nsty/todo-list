@@ -1,4 +1,4 @@
-import { deleteTodoFromArray, todosArray } from "../todo/todoManager";
+import { deleteTodoFromArray, todosArray } from "../../todo/todoManager";
 import { printTodoArray } from "./todoPrinter";
 
 export function createDelBtn() {
