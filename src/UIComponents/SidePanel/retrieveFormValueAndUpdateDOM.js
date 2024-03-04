@@ -12,9 +12,8 @@ form.addEventListener('submit', event => {
     const inputValue = document.getElementById('todo-name').value;
     createCustomTodo(inputValue);
     printTodoArray(todosArray);
-
-    createDelBtn();
-
     document.getElementById("todo-name").value = "";
     closeFormOnSubmit();
+
+    createDelBtn();
 });
