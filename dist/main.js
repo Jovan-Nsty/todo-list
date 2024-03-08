@@ -110,6 +110,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/UIComponents/MainPanel/formCreate.js":
+/*!**************************************************!*\
+  !*** ./src/UIComponents/MainPanel/formCreate.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   formCreate: () => (/* binding */ formCreate)\n/* harmony export */ });\nfunction formCreate() {\n    const form = document.createElement('form');\n    form.id = 'project-form';\n\n    const input = document.createElement('input');\n    input.setAttribute('type', 'text');\n    input.setAttribute('placeholder', 'Enter your task..');\n    input.id = 'project-input-form';\n\n    form.appendChild(input);\n\n    return form;\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/formCreate.js?");
+
+/***/ }),
+
 /***/ "./src/UIComponents/MainPanel/updateMainPanel.js":
 /*!*******************************************************!*\
   !*** ./src/UIComponents/MainPanel/updateMainPanel.js ***!
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _upd
   \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   updateContent: () => (/* binding */ updateContent)\n/* harmony export */ });\nfunction updateContent() {\n    const content = document.getElementById('todo-list-items');\n    const todoList = document.getElementById('project-todo-list');\n\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n        \n        if(clickedListItem) {\n            populateProjectElements(content);\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\nfunction populateProjectElements(content) {\n    content.textContent = '';\n\n    const form = document.createElement('form');\n    form.id = 'project-form';\n\n    const input = document.createElement('input');\n    input.setAttribute('type', 'text');\n    input.setAttribute('placeholder', 'Enter your task..');\n\n    form.appendChild(input);\n    content.appendChild(form);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectContent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   updateContent: () => (/* binding */ updateContent)\n/* harmony export */ });\n/* harmony import */ var _formCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formCreate */ \"./src/UIComponents/MainPanel/formCreate.js\");\n\n\nfunction updateContent() {\n    const content = document.getElementById('todo-list-items');\n    const todoList = document.getElementById('project-todo-list');\n\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n        \n        if(clickedListItem) {\n            content.textContent = '';\n            content.appendChild((0,_formCreate__WEBPACK_IMPORTED_MODULE_0__.formCreate)());\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectContent.js?");
 
 /***/ }),
 
