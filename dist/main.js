@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _updateProjectTitle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateProjectTitle.js */ \"./src/UIComponents/MainPanel/updateProjectTitle.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', () => {  \n    (0,_updateProjectTitle_js__WEBPACK_IMPORTED_MODULE_0__.titleUpdate)();\n})\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateMainPanel.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _updateProjectTitle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateProjectTitle.js */ \"./src/UIComponents/MainPanel/updateProjectTitle.js\");\n/* harmony import */ var _updateProjectContent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./updateProjectContent.js */ \"./src/UIComponents/MainPanel/updateProjectContent.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {  \n    (0,_updateProjectTitle_js__WEBPACK_IMPORTED_MODULE_0__.titleUpdate)();\n    (0,_updateProjectContent_js__WEBPACK_IMPORTED_MODULE_1__.updateContent)();\n})\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateMainPanel.js?");
+
+/***/ }),
+
+/***/ "./src/UIComponents/MainPanel/updateProjectContent.js":
+/*!************************************************************!*\
+  !*** ./src/UIComponents/MainPanel/updateProjectContent.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   updateContent: () => (/* binding */ updateContent)\n/* harmony export */ });\nfunction updateContent() {\n    const content = document.getElementById('todo-list-items');\n    const todoList = document.getElementById('project-todo-list');\n\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n        \n        if(clickedListItem) {\n            populateProjectElements(content);\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\nfunction populateProjectElements(content) {\n    content.textContent = '';\n\n    const form = document.createElement('form');\n    form.id = 'project-form';\n\n    const input = document.createElement('input');\n    input.setAttribute('type', 'text');\n    input.setAttribute('placeholder', 'Enter your task..');\n\n    form.appendChild(input);\n    content.appendChild(form);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectContent.js?");
 
 /***/ }),
 
