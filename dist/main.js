@@ -110,6 +110,26 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/UIComponents/MainPanel/updateMainPanel.js":
+/*!*******************************************************!*\
+  !*** ./src/UIComponents/MainPanel/updateMainPanel.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _updateProjectTitle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateProjectTitle */ \"./src/UIComponents/MainPanel/updateProjectTitle.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    const title = document.querySelector('h2');\n    const todoList = document.getElementById('project-todo-list');\n    \n    (0,_updateProjectTitle__WEBPACK_IMPORTED_MODULE_0__.titleUpdate)(title, todoList);\n    updateProjectContent();\n})\n\nfunction updateProjectContent() {\n    const getMainContent = document.getElementById('todo-list-items');\n    const createInput = document.createElement('form');\n\n    getMainContent.appendChild(createInput);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateMainPanel.js?");
+
+/***/ }),
+
+/***/ "./src/UIComponents/MainPanel/updateProjectTitle.js":
+/*!**********************************************************!*\
+  !*** ./src/UIComponents/MainPanel/updateProjectTitle.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   titleUpdate: () => (/* binding */ titleUpdate)\n/* harmony export */ });\nfunction titleUpdate(title, todoList) {\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n\n        if(clickedListItem) {\n            title.textContent = clickedListItem.textContent;\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectTitle.js?");
+
+/***/ }),
+
 /***/ "./src/UIComponents/SidePanel/buttonFormTransform.js":
 /*!***********************************************************!*\
   !*** ./src/UIComponents/SidePanel/buttonFormTransform.js ***!
@@ -156,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIComponents/SidePanel/todoPrinter.js */ \"./src/UIComponents/SidePanel/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _UIComponents_SidePanel_buttonFormTransform_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UIComponents/SidePanel/buttonFormTransform.js */ \"./src/UIComponents/SidePanel/buttonFormTransform.js\");\n/* harmony import */ var _UIComponents_SidePanel_retrieveFormValueAndUpdateDOM_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js */ \"./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js\");\n\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Print all available todo projects\n(0,_UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/todoManager.js */ \"./src/todo/todoManager.js\");\n/* harmony import */ var _UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UIComponents/SidePanel/todoPrinter.js */ \"./src/UIComponents/SidePanel/todoPrinter.js\");\n/* harmony import */ var _todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./todo/defaultProject.js */ \"./src/todo/defaultProject.js\");\n/* harmony import */ var _UIComponents_SidePanel_buttonFormTransform_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UIComponents/SidePanel/buttonFormTransform.js */ \"./src/UIComponents/SidePanel/buttonFormTransform.js\");\n/* harmony import */ var _UIComponents_SidePanel_retrieveFormValueAndUpdateDOM_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js */ \"./src/UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js\");\n/* harmony import */ var _UIComponents_MainPanel_updateMainPanel_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UIComponents/MainPanel/updateMainPanel.js */ \"./src/UIComponents/MainPanel/updateMainPanel.js\");\n\n\n\n\n\n\n\n\n// Creating a default 'personal' todo list on page load\n(0,_todo_defaultProject_js__WEBPACK_IMPORTED_MODULE_3__.createDefaultTodo)();\n\n// Print all available todo projects\n(0,_UIComponents_SidePanel_todoPrinter_js__WEBPACK_IMPORTED_MODULE_2__.printTodoArray)(_todo_todoManager_js__WEBPACK_IMPORTED_MODULE_1__.todosArray);\n\n//# sourceURL=webpack://todo-list/./src/app.js?");
 
 /***/ }),
 

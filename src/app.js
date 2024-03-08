@@ -4,6 +4,7 @@ import { printTodoArray } from './UIComponents/SidePanel/todoPrinter.js';
 import { createDefaultTodo } from './todo/defaultProject.js';
 import './UIComponents/SidePanel/buttonFormTransform.js';
 import './UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js';
+import './UIComponents/MainPanel/updateMainPanel.js';
 
 // Creating a default 'personal' todo list on page load
 createDefaultTodo();
