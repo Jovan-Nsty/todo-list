@@ -126,3 +126,16 @@ h1, h2 , li {
     text-align: center;
     font-size: large;
 }
+
+#todo-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todo-item {
+    height: 50px;
+    width: 1000px;
+    list-style: none;
+    background-color: var(--main-sidepanel-color);
+}
