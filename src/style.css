@@ -48,6 +48,10 @@ html, body {
     background-color: var(--main-sidepanel-color);
 }
 
+#todo-list-name {
+    background-color: var(--main-mainpanel-color);
+}
+
 #main-panel {
     background-color: var(--main-mainpanel-color);
     flex: 2;
