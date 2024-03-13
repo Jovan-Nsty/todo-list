@@ -1,6 +1,7 @@
 import { deleteTodoFromArray, todosArray } from "../../todo/todoManager";
 import { printTodoArray } from "./todoPrinter";
 
+// Creating individual Todo Project delete button
 export function createDelBtn() {
     const todoList = document.querySelectorAll('.li-item');
 
@@ -10,6 +11,7 @@ export function createDelBtn() {
         createBtn.textContent = 'x';
         todoList[i].appendChild(createBtn);
 
+        // Updating the Todo Project list
         createBtn.addEventListener('click', () => {
             updateTodoList(i);
         })

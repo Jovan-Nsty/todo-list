@@ -1,10 +1,13 @@
 import { formCreate } from "./formCreate";
 import { formSubmit } from "./formSubmit";
 
+// Function for individual Todo Project
+
 export function updateContent() {
     const content = document.getElementById('todo-list-items');
     const todoList = document.getElementById('project-todo-list');
     
+    // On each Todo Project click, form is created and <ul> list is created
     function handleClick(event) {
         const clickedListItem = event.target.closest('li.li-item > a');
         
@@ -26,6 +29,7 @@ export function updateContent() {
     })
 }
 
+// Function for creating the <ul> container for Todo Project sub items / tasks
 function listContainer() {
     const list = document.createElement('ul');
     list.id = 'todo-items-list';

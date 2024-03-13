@@ -1,3 +1,5 @@
+// Module for DOM manipulation & printing todo project list
+
 export const printTodoArray = array => {
     const getList = document.getElementById('project-todo-list');
     getList.textContent = '';

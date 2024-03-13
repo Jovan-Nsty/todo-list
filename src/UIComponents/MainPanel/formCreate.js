@@ -1,3 +1,5 @@
+// Module for creating the form that makes todo list items / tasks
+
 export function formCreate() {
     const form = document.createElement('form');
     form.id = 'project-form';

@@ -1,3 +1,4 @@
+// Factory function for Todo Project sub-items
 export const createTodoItem = () => {
     let title = '';
     let description = '';

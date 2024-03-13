@@ -1,3 +1,4 @@
+// Factory function for Todo Project
 export const createTodo = (title => {
     const titleName = title;
 
