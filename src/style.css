@@ -5,6 +5,12 @@
     font-weight: bold;
 }
 
+:root {
+    --main-sidepanel-color: #121212;
+    --main-mainpanel-color: #161a1d;
+    --main-text-color: #e3e3e3;
+}
+
 html, body {
     height: 100vh;
 }
@@ -15,26 +21,19 @@ html, body {
 }
 
 #side-panel {
-    background-color: blueviolet;
+    background-color: var(--main-sidepanel-color);
     width: 250px;
     min-width: 250px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #todo-project-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#todo-project-list-btn {
-    height: 50px;
-    width: 250px;
-    background-color: burlywood;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
 }
 
 #todo-name {
@@ -46,10 +45,84 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    background-color: chocolate;
+    background-color: var(--main-sidepanel-color);
 }
 
 #main-panel {
-    background-color: brown;
+    background-color: var(--main-mainpanel-color);
     flex: 2;
+}
+
+h1, h2 , li {
+    color: var(--main-text-color);
+}
+
+#todo-name {
+    height: 40px;
+    width: 210px;
+    min-width: 210px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#todo-add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 210px;
+    min-width: 210px;
+    word-spacing: 2px;
+    border-radius: 10px;
+    border: none;
+    color: var(--main-text-color);
+    background-color: var(--main-sidepanel-color);
+}
+
+#todo-add-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--main-mainpanel-color);
+}
+
+#project-todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#project-todo-list > li {
+    list-style: none;
+    height: 40px;
+    width: 210px;
+    min-width: 210px;
+    word-spacing: 2px;
+    border-radius: 10px;
+    background-color: var(--main-sidepanel-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-todo-list > li:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--main-mainpanel-color);
+}
+
+#todo-list-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#project-input-form {
+    margin-top: 35px;
+    height: 50px;
+    width: 1000px;
+    text-align: center;
+    font-size: large;
 }
