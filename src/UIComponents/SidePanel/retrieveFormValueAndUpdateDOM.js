@@ -1,4 +1,4 @@
-import { createCustomTodo } from "../../todo/customProject";
+import { createTodoProject } from "../../todo/createProject";
 import { todosArray } from "../../todo/todoManager";
 import { closeFormOnSubmit } from "./buttonFormTransform";
 import { createDelBtn } from "./manageTodoListDeleteButtons";
@@ -10,7 +10,7 @@ form.addEventListener('submit', event => {
     event.preventDefault();
 
     const inputValue = document.getElementById('todo-name').value;
-    createCustomTodo(inputValue);
+    createTodoProject(inputValue);
     printTodoArray(todosArray);
     document.getElementById("todo-name").value = "";
     closeFormOnSubmit();
