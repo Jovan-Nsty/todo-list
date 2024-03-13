@@ -120,6 +120,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/UIComponents/MainPanel/formSubmit.js":
+/*!**************************************************!*\
+  !*** ./src/UIComponents/MainPanel/formSubmit.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   formSubmit: () => (/* binding */ formSubmit)\n/* harmony export */ });\n/* harmony import */ var _todo_createProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../todo/createProject */ \"./src/todo/createProject.js\");\n/* harmony import */ var _todo_todoItemCreate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../todo/todoItemCreate */ \"./src/todo/todoItemCreate.js\");\n\n\n\nfunction formSubmit() {\n    const form = document.getElementById('project-input-form');\n    const listContainer = document.getElementById('todo-items-list');\n    const inputValue = form.value;\n\n    const todoItem = (0,_todo_todoItemCreate__WEBPACK_IMPORTED_MODULE_1__.createTodoItem)();\n    todoItem.setTitle(inputValue);\n\n    _todo_createProject__WEBPACK_IMPORTED_MODULE_0__.todo.setTaskListItem(todoItem);\n    \n    listContainer.appendChild(listPopulate(todoItem));\n}\n\nfunction listPopulate(value) {\n    const listItem = document.createElement('li');\n    listItem.textContent = value.getTitle();\n    listItem.classList.add('todo-item');\n\n    return listItem;\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/formSubmit.js?");
+
+/***/ }),
+
 /***/ "./src/UIComponents/MainPanel/updateMainPanel.js":
 /*!*******************************************************!*\
   !*** ./src/UIComponents/MainPanel/updateMainPanel.js ***!
@@ -136,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _upd
   \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   updateContent: () => (/* binding */ updateContent)\n/* harmony export */ });\n/* harmony import */ var _formCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formCreate */ \"./src/UIComponents/MainPanel/formCreate.js\");\n\n\nfunction updateContent() {\n    const content = document.getElementById('todo-list-items');\n    const todoList = document.getElementById('project-todo-list');\n    \n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n        \n        if(clickedListItem) {\n            content.textContent = '';\n            content.appendChild((0,_formCreate__WEBPACK_IMPORTED_MODULE_0__.formCreate)());\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectContent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   updateContent: () => (/* binding */ updateContent)\n/* harmony export */ });\n/* harmony import */ var _formCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formCreate */ \"./src/UIComponents/MainPanel/formCreate.js\");\n/* harmony import */ var _formSubmit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./formSubmit */ \"./src/UIComponents/MainPanel/formSubmit.js\");\n\n\n\nfunction updateContent() {\n    const content = document.getElementById('todo-list-items');\n    const todoList = document.getElementById('project-todo-list');\n    \n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n        \n        if(clickedListItem) {\n            content.textContent = '';\n            content.appendChild((0,_formCreate__WEBPACK_IMPORTED_MODULE_0__.formCreate)());\n            content.appendChild(listContainer());\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n\n    content.addEventListener('submit', event => {\n        if(event.target.id === 'project-form') {\n            event.preventDefault();\n            (0,_formSubmit__WEBPACK_IMPORTED_MODULE_1__.formSubmit)();\n            document.getElementById('project-input-form').value = '';\n        }\n    })\n}\n\nfunction listContainer() {\n    const list = document.createElement('ul');\n    list.id = 'todo-items-list';\n\n    return list;\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectContent.js?");
 
 /***/ }),
 
@@ -206,7 +216,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTodoProject: () => (/* binding */ createTodoProject)\n/* harmony export */ });\n/* harmony import */ var _todoCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todoCreate */ \"./src/todo/todoCreate.js\");\n/* harmony import */ var _todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoManager */ \"./src/todo/todoManager.js\");\n\n\n\nfunction createTodoProject(value) {\n    const todo = (0,_todoCreate__WEBPACK_IMPORTED_MODULE_0__.createTodo)(value);\n    (0,_todoManager__WEBPACK_IMPORTED_MODULE_1__.addTodoToArray)(todo);\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/createProject.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTodoProject: () => (/* binding */ createTodoProject),\n/* harmony export */   todo: () => (/* binding */ todo)\n/* harmony export */ });\n/* harmony import */ var _todoCreate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todoCreate */ \"./src/todo/todoCreate.js\");\n/* harmony import */ var _todoManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoManager */ \"./src/todo/todoManager.js\");\n\n\n\nlet todo;\n\nfunction createTodoProject(value) {\n    todo = (0,_todoCreate__WEBPACK_IMPORTED_MODULE_0__.createTodo)(value);\n    (0,_todoManager__WEBPACK_IMPORTED_MODULE_1__.addTodoToArray)(todo);\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/createProject.js?");
 
 /***/ }),
 
@@ -217,6 +227,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTodo: () => (/* binding */ createTodo)\n/* harmony export */ });\nconst createTodo = (title => {\n    const titleName = title;\n\n    let taskList = [];\n\n    const setTaskListItem = value => {\n        taskList.unshift(value);\n    }\n\n    const getTaskList = () => {\n        for (const task of taskList) {\n            console.log(task.getTitle());\n            console.log(task.getDescription());\n            console.log(task.getDueDate());\n            console.log(task.getPriority());\n        }\n    }\n\n    const getTodoTitle = () => {\n        return titleName;\n    }\n\n    return { getTodoTitle, setTaskListItem, getTaskList }\n})\n\n//# sourceURL=webpack://todo-list/./src/todo/todoCreate.js?");
+
+/***/ }),
+
+/***/ "./src/todo/todoItemCreate.js":
+/*!************************************!*\
+  !*** ./src/todo/todoItemCreate.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTodoItem: () => (/* binding */ createTodoItem)\n/* harmony export */ });\nconst createTodoItem = () => {\n    let title = '';\n    let description = '';\n    let dueDate = '';\n    let priority = '';\n\n    const setTitle = value => {\n        title = value;\n    }\n\n    const setDescription = value => {\n        description = value;\n    }\n\n    const setDueDate = value => {\n        dueDate = value;\n    }\n\n    const setPriority = value => {\n        priority = value;\n    }\n\n    const getTitle = () => {\n        return title;\n    }\n\n    const getDescription = () => {\n        return description;\n    }\n\n    const getDueDate = () => {\n        return dueDate;\n    }\n\n    const getPriority = () => {\n        return priority\n    }\n\n    return {\n        setTitle,\n        setDescription,\n        setDueDate,\n        setPriority,\n        getTitle,\n        getDescription,\n        getDueDate,\n        getPriority\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/todo/todoItemCreate.js?");
 
 /***/ }),
 

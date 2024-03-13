@@ -1,4 +1,5 @@
 import { formCreate } from "./formCreate";
+import { formSubmit } from "./formSubmit";
 
 export function updateContent() {
     const content = document.getElementById('todo-list-items');
@@ -10,8 +11,24 @@ export function updateContent() {
         if(clickedListItem) {
             content.textContent = '';
             content.appendChild(formCreate());
+            content.appendChild(listContainer());
         }
     }
 
     todoList.addEventListener('click', handleClick);
+
+    content.addEventListener('submit', event => {
+        if(event.target.id === 'project-form') {
+            event.preventDefault();
+            formSubmit();
+            document.getElementById('project-input-form').value = '';
+        }
+    })
+}
+
+function listContainer() {
+    const list = document.createElement('ul');
+    list.id = 'todo-items-list';
+
+    return list;
 }
