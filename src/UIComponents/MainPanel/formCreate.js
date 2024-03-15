@@ -7,7 +7,8 @@ export function formCreate() {
     const input = document.createElement('input');
     input.setAttribute('type', 'text');
     input.setAttribute('placeholder', 'Enter your task..');
-    input.id = 'project-input-form';
+    input.setAttribute('id', 'project-input-form');
+    input.setAttribute('name', 'task-submit');
 
     form.appendChild(input);
 

@@ -13,6 +13,7 @@ export function listPopulate(value) {
 function checkButtonPopulate() {
     const button = document.createElement('input');
     button.setAttribute('type','checkbox');
+    button.setAttribute('name', 'delete');
     button.classList.add('todo-list-item-checkbox-btn');
 
     return button;
