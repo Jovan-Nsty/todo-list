@@ -145,6 +145,17 @@ h1, h2 , li {
     background-color: var(--main-sidepanel-color);
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.todo-item > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-item > div:nth-child(2) {
+    flex-grow: 2;
 }
 
 .todo-list-item-checkbox-btn {
@@ -154,5 +165,4 @@ h1, h2 , li {
     border: 1px solid #ccc; 
     border-radius: 3px; 
     cursor: pointer; 
-    margin-right: 10px; 
 }
