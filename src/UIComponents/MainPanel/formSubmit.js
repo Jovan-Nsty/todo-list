@@ -1,5 +1,6 @@
 import { todo } from "../../todo/createProject";
 import { createTodoItem } from "../../todo/todoItemCreate";
+import { listPopulate } from "./listItemCreate";
 
 // Form submit action
 export function formSubmit() {
@@ -14,14 +15,6 @@ export function formSubmit() {
     // Adding sub items / tasks to Todo Project array task list
     todo.setTaskListItem(todoItem);
     
+    // Creating <li> sub items / tasks elements 
     listContainer.appendChild(listPopulate(todoItem));
-}
-
-// Function for creating <li> for Todo Project sub items / tasks
-function listPopulate(value) {
-    const listItem = document.createElement('li');
-    listItem.textContent = value.getTitle();
-    listItem.classList.add('todo-item');
-
-    return listItem;
 }
