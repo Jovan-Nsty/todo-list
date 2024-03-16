@@ -2,14 +2,13 @@ import { formCreate } from "./formCreate";
 import { formSubmit } from "./formSubmit";
 
 // Function for individual Todo Project
-
 export function updateContent() {
     const content = document.getElementById('todo-list-items');
     const todoList = document.getElementById('project-todo-list');
     
     // On each Todo Project click, form is created and <ul> list is created
     function handleClick(event) {
-        const clickedListItem = event.target.closest('li.li-item > a');
+        const clickedListItem = event.target.closest('li.li-item');
         
         if(clickedListItem) {
             content.textContent = '';
