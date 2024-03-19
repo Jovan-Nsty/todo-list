@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   titleUpdate: () => (/* binding */ titleUpdate)\n/* harmony export */ });\nfunction titleUpdate() {\n    const title = document.querySelector('h2');\n    const todoList = document.getElementById('project-todo-list');\n\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item > a');\n\n        if(clickedListItem) {\n            title.textContent = clickedListItem.textContent;\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectTitle.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   titleUpdate: () => (/* binding */ titleUpdate)\n/* harmony export */ });\nfunction titleUpdate() {\n    const title = document.querySelector('h2');\n    const todoList = document.getElementById('project-todo-list');\n\n    function handleClick(event) {\n        const clickedListItem = event.target.closest('li.li-item');\n\n        if(clickedListItem) {\n            title.textContent = clickedListItem.textContent;\n        }\n    }\n\n    todoList.addEventListener('click', handleClick);\n}\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/updateProjectTitle.js?");
 
 /***/ }),
 
