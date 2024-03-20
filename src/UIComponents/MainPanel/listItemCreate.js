@@ -48,6 +48,6 @@ function createDivForElement(element) {
 export function updateDatasetIndex() {
     const listItems = document.querySelectorAll('.todo-item');
     listItems.forEach((item, index) => {
-        item.dataset.index = index++;
+        item.dataset.index = index;
     })
 }
