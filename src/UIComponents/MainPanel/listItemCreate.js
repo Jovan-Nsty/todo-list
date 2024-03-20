@@ -43,3 +43,11 @@ function createDivForElement(element) {
     
     return div;
 }
+
+// Function to add indexes to <li> sub item / task elements
+export function updateDatasetIndex() {
+    const listItems = document.querySelectorAll('.todo-item');
+    listItems.forEach((item, index) => {
+        item.dataset.index = index++;
+    })
+}

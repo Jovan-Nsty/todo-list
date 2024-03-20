@@ -1,6 +1,6 @@
 import { todo } from "../../todo/createProject";
 import { createTodoItem } from "../../todo/todoItemCreate";
-import { listPopulate } from "./listItemCreate";
+import { listPopulate, updateDatasetIndex } from "./listItemCreate";
 
 // Form submit action
 export function formSubmit() {
@@ -17,4 +17,6 @@ export function formSubmit() {
     
     // Creating <li> sub items / tasks elements 
     listContainer.appendChild(listPopulate(todoItem));
+
+    updateDatasetIndex();
 }
