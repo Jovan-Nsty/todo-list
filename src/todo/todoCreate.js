@@ -8,6 +8,10 @@ export const createTodo = (title => {
         taskList.unshift(value);
     }
 
+    const removeTaskListItem = value => {
+        taskList.splice(value, 1);
+    }
+
     const getTaskList = () => {
         for (const task of taskList) {
             console.log(task.getTitle());
@@ -21,5 +25,5 @@ export const createTodo = (title => {
         return titleName;
     }
 
-    return { getTodoTitle, setTaskListItem, getTaskList }
+    return { getTodoTitle, setTaskListItem, removeTaskListItem, getTaskList }
 })

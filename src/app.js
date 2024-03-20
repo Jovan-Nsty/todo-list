@@ -5,6 +5,7 @@ import './UIComponents/SidePanel/buttonFormTransform.js';
 import './UIComponents/SidePanel/retrieveFormValueAndUpdateDOM.js';
 import './UIComponents/MainPanel/updateMainPanel.js';
 import { createTodoProject } from './todo/createProject.js';
+import './UIComponents/MainPanel/removeTodoTask.js';
 
 // Creating a default 'personal' todo list on page load
 createTodoProject('Personal');
