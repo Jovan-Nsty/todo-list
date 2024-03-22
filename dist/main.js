@@ -158,7 +158,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************************/
 /***/ (() => {
 
-eval("document.getElementById('todo-list-items').addEventListener('click', event => {\n    if(event.target.classList.contains('todo-list-item-expand-btn')) {\n        const listItem = event.target.closest('.todo-item');\n        const expandableContent = listItem.querySelector('.todo-item-body');\n\n        if(expandableContent.style.display === 'none' || expandableContent.style.display === '') {\n            expandableContent.style.display = 'block';\n        } else {\n            expandableContent.style.display = 'none';\n        }\n    }\n})\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/listItemExpand.js?");
+eval("document.getElementById('todo-list-items').addEventListener('click', event => {\n    if(event.target.classList.contains('todo-list-item-expand-btn')) {\n        const listItem = event.target.closest('.todo-item');\n        const expandableContent = listItem.querySelector('.todo-item-body');\n\n        if(expandableContent.style.display === 'none' || expandableContent.style.display === '') {\n            expandableContent.style.display = 'flex';\n        } else {\n            expandableContent.style.display = 'none';\n        }\n    }\n})\n\n//# sourceURL=webpack://todo-list/./src/UIComponents/MainPanel/listItemExpand.js?");
 
 /***/ }),
 

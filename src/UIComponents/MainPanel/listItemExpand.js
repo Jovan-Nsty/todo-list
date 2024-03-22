@@ -4,7 +4,7 @@ document.getElementById('todo-list-items').addEventListener('click', event => {
         const expandableContent = listItem.querySelector('.todo-item-body');
 
         if(expandableContent.style.display === 'none' || expandableContent.style.display === '') {
-            expandableContent.style.display = 'block';
+            expandableContent.style.display = 'flex';
         } else {
             expandableContent.style.display = 'none';
         }
