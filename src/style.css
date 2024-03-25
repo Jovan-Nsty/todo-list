@@ -139,11 +139,17 @@ h1, h2 , li {
 
 .todo-item {
     list-style: none;
+    width: 1000px;
+    border: 3px solid var(--main-sidepanel-color);
+}
+
+.todo-list-item-expand-btn {
+    cursor: pointer;
 }
 
 .todo-item-header {
     height: 50px;
-    width: 1000px;
+    
     padding: 10px;
     background-color: var(--main-sidepanel-color);
     display: flex;
@@ -182,10 +188,20 @@ h1, h2 , li {
     resize: none;
 }
 
+.todo-item-body-left {
+    width: calc(50%);
+}
+
 .todo-item-body-right {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: calc(50%);
+}
+
+.date-selector, 
+.priority-selector {
+    height: calc(50%);
 }
 
 .date-selector > button {
@@ -193,4 +209,10 @@ h1, h2 , li {
     width: 80px;
     color: #fff;
     background-color: var(--main-mainpanel-color);
+    cursor: pointer;
+}
+
+.priority-select-panel {
+    width: 240px;
+    cursor: pointer;
 }

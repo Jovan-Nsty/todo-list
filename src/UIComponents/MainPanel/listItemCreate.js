@@ -24,7 +24,7 @@ export function listPopulate(value) {
 
     const bottomRightContainer = document.createElement('div');
     bottomRightContainer.classList.add('todo-item-body-right');
-    bottomRightContainer.appendChild(createDivForElement(createDateSelector(),'date-selector'));
+    bottomRightContainer.appendChild(createDateSelector());
     bottomRightContainer.appendChild(createDivForElement(createPrioritySelector(),'priority-selector'));
 
     // Append <div>'s to the bottom todo item task <div> container 
@@ -104,15 +104,12 @@ function createDateSelector() {
 
 // Priority creation
 function createPrioritySelector() {
-    // Create container div
-    const container = document.createElement('div');
-    container.classList.add('priority-selector');
-
     // Create select element
     const select = document.createElement('select');
+    select.classList.add('priority-select-panel');
 
     // Priority options
-    const priorities = ['Low', 'Medium', 'High'];
+    const priorities = ['None', 'Low', 'Medium', 'High'];
     priorities.forEach(priority => {
         const option = document.createElement('option');
         option.value = priority.toLowerCase();
@@ -120,9 +117,7 @@ function createPrioritySelector() {
         select.appendChild(option);
     });
 
-    container.appendChild(select);
-
-    return container;
+    return select;
 }
 
 // Function to wrap <li> elements in <div>'s
