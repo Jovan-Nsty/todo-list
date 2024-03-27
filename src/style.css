@@ -140,7 +140,6 @@ h1, h2 , li {
 .todo-item {
     list-style: none;
     width: 1000px;
-    border: 3px solid var(--main-sidepanel-color);
 }
 
 .todo-list-item-expand-btn {
@@ -149,12 +148,14 @@ h1, h2 , li {
 
 .todo-item-header {
     height: 50px;
-    
     padding: 10px;
     background-color: var(--main-sidepanel-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 3px solid var(--main-sidepanel-color);
+    border-left: 3px solid var(--main-sidepanel-color);
+    border-right: 3px solid var(--main-sidepanel-color);
 }
 
 .todo-item-header > div {
@@ -180,6 +181,9 @@ h1, h2 , li {
     display: flex;
     background-color: var(--main-sidepanel-color);
     display: none;
+    border-bottom: 3px solid var(--main-sidepanel-color);
+    border-left: 3px solid var(--main-sidepanel-color);
+    border-right: 3px solid var(--main-sidepanel-color);
 }
 
 .notes-area {
