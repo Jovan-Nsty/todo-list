@@ -7,23 +7,23 @@ document.getElementById('todo-list-items').addEventListener('change', event => {
         const bodyElement = listItem.querySelector('.todo-item-body');
 
         if(selectedOption === 'none') {
-            headerElement.style.borderLeft = '3px solid var(--main-sidepanel-color)';
-            bodyElement.style.borderLeft = '3px solid var(--main-sidepanel-color)';
+            headerElement.style.borderLeft = '4px solid var(--main-sidepanel-color)';
+            bodyElement.style.borderLeft = '4px solid var(--main-sidepanel-color)';
         }
         
         if(selectedOption === 'low') {
-            headerElement.style.borderLeft = '3px solid blue';
-            bodyElement.style.borderLeft = '3px solid blue';
+            headerElement.style.borderLeft = '4px solid blue';
+            bodyElement.style.borderLeft = '4px solid blue';
         }
 
         if(selectedOption === 'medium') {
-            headerElement.style.borderLeft = '3px solid orange';
-            bodyElement.style.borderLeft = '3px solid orange';
+            headerElement.style.borderLeft = '4px solid orange';
+            bodyElement.style.borderLeft = '4px solid orange';
         }
 
         if(selectedOption === 'high') {
-            headerElement.style.borderLeft = '3px solid red';
-            bodyElement.style.borderLeft = '3px solid red';
+            headerElement.style.borderLeft = '4px solid red';
+            bodyElement.style.borderLeft = '4px solid red';
         }
     }
 })

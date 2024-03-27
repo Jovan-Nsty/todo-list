@@ -153,9 +153,10 @@ h1, h2 , li {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 3px solid var(--main-sidepanel-color);
-    border-left: 3px solid var(--main-sidepanel-color);
-    border-right: 3px solid var(--main-sidepanel-color);
+    border-top: 4px solid var(--main-sidepanel-color);
+    border-left: 4px solid var(--main-sidepanel-color);
+    border-top-left-radius: 5px;
+    border-right: 4px solid var(--main-sidepanel-color);
 }
 
 .todo-item-header > div {
@@ -181,9 +182,10 @@ h1, h2 , li {
     display: flex;
     background-color: var(--main-sidepanel-color);
     display: none;
-    border-bottom: 3px solid var(--main-sidepanel-color);
-    border-left: 3px solid var(--main-sidepanel-color);
-    border-right: 3px solid var(--main-sidepanel-color);
+    border-bottom: 4px solid var(--main-sidepanel-color);
+    border-left: 4px solid var(--main-sidepanel-color);
+    border-bottom-left-radius: 5px;
+    border-right: 4px solid var(--main-sidepanel-color);
 }
 
 .notes-area {
