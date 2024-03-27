@@ -25,7 +25,7 @@ export function listPopulate(value) {
     const bottomRightContainer = document.createElement('div');
     bottomRightContainer.classList.add('todo-item-body-right');
     bottomRightContainer.appendChild(createDateSelector());
-    bottomRightContainer.appendChild(createDivForElement(createPrioritySelector(),'priority-selector'));
+    bottomRightContainer.appendChild(createPrioritySelector());
 
     // Append <div>'s to the bottom todo item task <div> container 
     bottomContainer.appendChild(bottomLeftContainer);
@@ -78,9 +78,16 @@ function createNotesArea() {
 
 // Due Date creation
 function createDateSelector() {
-    // Button container
+    // Main container
     const container = document.createElement('div');
     container.classList.add('date-selector');
+
+    // Container for buttons
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('date-btn-container');
+
+    const title = document.createElement('p');
+    title.textContent = 'Due date';
 
     // Today button
     const todayButton = document.createElement('button');
@@ -95,15 +102,35 @@ function createDateSelector() {
     dateButton.textContent = 'Set date';
 
     // Append buttons to the container
-    container.appendChild(todayButton);
-    container.appendChild(tomorrowButton);
-    container.appendChild(dateButton);
+    buttonContainer.appendChild(todayButton);
+    buttonContainer.appendChild(tomorrowButton);
+    buttonContainer.appendChild(dateButton);
+
+    // Append title and button container to the main container
+    container.appendChild(createDivForElement(title, 'due-date-title'));
+    container.appendChild(buttonContainer);
 
     return container;
 }
 
 // Priority creation
 function createPrioritySelector() {
+    // Create main container
+    const container = document.createElement('div');
+    container.classList.add('priority-selector');
+
+    // Create title container
+    const titleContainer = document.createElement('div')
+    titleContainer.classList.add('priority-title');
+
+    // Create title
+    const title = document.createElement('p');
+    title.innerText = 'Priority';
+
+    // Create select container
+    const selectContainer = document.createElement('div');
+    selectContainer.classList.add('select-container');
+    
     // Create select element
     const select = document.createElement('select');
     select.classList.add('priority-select-panel');
@@ -117,7 +144,13 @@ function createPrioritySelector() {
         select.appendChild(option);
     });
 
-    return select;
+    titleContainer.appendChild(title);
+    selectContainer.appendChild(select);
+
+    container.appendChild(titleContainer);
+    container.appendChild(selectContainer);
+
+    return container;
 }
 
 // Function to wrap <li> elements in <div>'s
