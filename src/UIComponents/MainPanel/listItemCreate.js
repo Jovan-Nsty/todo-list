@@ -10,7 +10,7 @@ export function listPopulate(value) {
 
     // Append 'basic info' to the top todo item task container
     topContainer.appendChild(createDivForElement(checkButtonPopulate(),'check-btn'));
-    topContainer.appendChild(createDivForElement(createTextElement(value),'text-content'))
+    topContainer.appendChild(createTextElement(value));
     topContainer.appendChild(createDivForElement(expandButtonPopulate(),'expand-btn'));
 
     // Create <li> bottom 'body' <div> container with additional project info
@@ -50,10 +50,25 @@ function checkButtonPopulate() {
 
 // Todo Project sub item / task title text content
 function createTextElement(title) {
-    const paragraph = document.createElement('p');
-    paragraph.innerText = title.getTitle();
+    const container = document.createElement('div');
+    const projectNameContainer = document.createElement('div');
+    const dateContainer = document.createElement('div');
 
-    return paragraph;
+    const nameParagraph = document.createElement('p');
+    nameParagraph.innerText = title.getTitle();
+
+    const dateParagraph = document.createElement('p');
+
+    projectNameContainer.appendChild(nameParagraph);
+    projectNameContainer.classList.add('task-name-title');
+    dateContainer.appendChild(dateParagraph);
+    dateContainer.classList.add('date-container');
+
+    container.appendChild(projectNameContainer);
+    container.appendChild(dateContainer);
+    container.classList.add('text-content');
+
+    return container;
 }
 
 // Expand button creation for Todo Project sub items / tasks
@@ -91,15 +106,22 @@ function createDateSelector() {
 
     // Today button
     const todayButton = document.createElement('button');
+    todayButton.classList.add('today-btn');
     todayButton.textContent = 'Today';
 
     // Tomorrow button
     const tomorrowButton = document.createElement('button');
+    tomorrowButton.classList.add('tomorrow-btn');
     tomorrowButton.textContent = 'Tomorrow';
 
     // Date picker input
-    const dateButton = document.createElement('button');
-    dateButton.textContent = 'Set date';
+    const dateButton = document.createElement('input');
+    dateButton.classList.add('due-date-input');
+    dateButton.type = 'date';
+
+    const dateInputLabel = document.createElement('label');
+    dateInputLabel.textContent = 'Select date:';
+    dateInputLabel.htmlFor = 'due-date-input'
 
     // Append buttons to the container
     buttonContainer.appendChild(todayButton);

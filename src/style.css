@@ -169,6 +169,18 @@ h1, h2 , li {
     flex-grow: 2;
 }
 
+.check-btn {
+    margin-right: 10px;
+}
+
+.date-container {
+    margin-left: auto;
+}
+
+.expand-btn {
+    margin-left: 10px;
+}
+
 .todo-list-item-checkbox-btn {
     width: 20px;
     height: 20px;

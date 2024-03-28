@@ -8,6 +8,7 @@ import { createTodoProject } from './todo/createProject.js';
 import './UIComponents/MainPanel/removeTodoTask.js';
 import './UIComponents/MainPanel/listItemExpand.js';
 import './UIComponents/MainPanel/taskPriorityUpdate.js';
+import './UIComponents/MainPanel/updateDueDate.js';
 
 // Creating a default 'personal' todo list on page load
 createTodoProject('Personal');
