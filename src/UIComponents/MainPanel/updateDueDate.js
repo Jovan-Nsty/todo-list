@@ -1,3 +1,4 @@
+// Module for capturing and updating the DOM date display
 document.getElementById('todo-list-items').addEventListener('click', event => {
     const eventTarget = event.target;
 
@@ -7,6 +8,7 @@ document.getElementById('todo-list-items').addEventListener('click', event => {
 
         printDateToDOM(todayDate, eventTarget);
     }
+
     if(event.target.classList.contains('tomorrow-btn')) {
         const tomorrowDate = new Date();
         tomorrowDate.setDate(tomorrowDate.getDate() + 1);
@@ -21,6 +23,7 @@ document.getElementById('todo-list-items').addEventListener('input', event => {
 
     if(eventTarget && eventTarget.classList && eventTarget.classList.contains('due-date-input')) {
         const selectedDate = eventTarget.value;
+
         if(selectedDate) {
             const parsedDate = new Date(selectedDate);
             const formattedDate = parsedDate.toDateString();
@@ -35,6 +38,7 @@ function printDateToDOM(value, eventTarget) {
 
     if(closestListItem) {
         const dateContainer = closestListItem.querySelector('.date-container > p');
+
         if(dateContainer) {
             dateContainer.textContent = value;
         }
