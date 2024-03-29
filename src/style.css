@@ -9,6 +9,7 @@
     --main-sidepanel-color: #121212;
     --main-mainpanel-color: #161a1d;
     --main-text-color: #e3e3e3;
+    --main-hover-color: #2a2e31;
 }
 
 html, body {
@@ -87,7 +88,7 @@ h1, h2 , li {
 #todo-add-btn:hover {
     cursor: pointer;
     color: #fff;
-    background-color: var(--main-mainpanel-color);
+    background-color: var(--main-hover-color);
 }
 
 #project-todo-list {
@@ -112,7 +113,7 @@ h1, h2 , li {
 #project-todo-list > li:hover {
     cursor: pointer;
     color: #fff;
-    background-color: var(--main-mainpanel-color);
+    background-color: var(--main-hover-color);
 }
 
 #todo-list-items {
@@ -153,9 +154,7 @@ h1, h2 , li {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 4px solid var(--main-sidepanel-color);
     border-left: 4px solid var(--main-sidepanel-color);
-    border-top-left-radius: 5px;
     border-right: 4px solid var(--main-sidepanel-color);
 }
 
@@ -195,15 +194,13 @@ h1, h2 , li {
     display: flex;
     background-color: var(--main-sidepanel-color);
     display: none;
-    border-bottom: 4px solid var(--main-sidepanel-color);
     border-left: 4px solid var(--main-sidepanel-color);
-    border-bottom-left-radius: 5px;
     border-right: 4px solid var(--main-sidepanel-color);
 }
 
 .notes-area {
     height: 260px;
-    width: 500px;
+    width: 490px;
     resize: none;
     border: none;
     padding: 5px;
@@ -243,6 +240,12 @@ h1, h2 , li {
     background-color: var(--main-mainpanel-color);
     border: 1px solid var(--main-text-color);
     cursor: pointer;
+}
+
+.priority-select-panel:hover,
+.date-btn-container > button:hover,
+.date-btn-container > input:hover {
+    background-color: var(--main-hover-color);
 }
 
 .due-date-input {
