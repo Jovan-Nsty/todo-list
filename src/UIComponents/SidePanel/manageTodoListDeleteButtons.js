@@ -6,10 +6,13 @@ export function createDelBtn() {
     const todoList = document.querySelectorAll('.li-item');
 
     for(let i = 1; i < todoList.length; i++) {
+        const buttonContainer = document.createElement('div');
         const createBtn = document.createElement('button');
         createBtn.classList.add('del-btn');
         createBtn.textContent = 'x';
-        todoList[i].appendChild(createBtn);
+        buttonContainer.appendChild(createBtn);
+        buttonContainer.classList.add('todo-project-delete-btn-container');
+        todoList[i].appendChild(buttonContainer);
 
         // Updating the Todo Project list
         createBtn.addEventListener('click', () => {

@@ -3,7 +3,7 @@ const form = document.getElementById('todo-name');
 
 button.addEventListener('click', () => {
     button.style.display = 'none';
-    form.style.display = 'block';
+    form.style.display = 'flex';
 })
 
 document.body.addEventListener('click', event => {
@@ -14,5 +14,5 @@ document.body.addEventListener('click', event => {
 
 export function closeFormOnSubmit() {
     form.style.display = 'none';
-    button.style.display = 'block';
+    button.style.display = 'flex';
 }
