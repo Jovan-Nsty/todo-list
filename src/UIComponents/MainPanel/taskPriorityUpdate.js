@@ -7,23 +7,23 @@ document.getElementById('todo-list-items').addEventListener('change', event => {
         const bodyElement = listItem.querySelector('.todo-item-body');
 
         if(selectedOption === 'none') {
-            headerElement.style.borderLeft = '5px solid var(--main-sidepanel-color)';
-            bodyElement.style.borderLeft = '5px solid var(--main-sidepanel-color)';
+            headerElement.style.borderLeft = '6px solid var(--main-sidepanel-color)';
+            bodyElement.style.borderLeft = '6px solid var(--main-sidepanel-color)';
         }
         
         if(selectedOption === 'low') {
-            headerElement.style.borderLeft = '5px solid var(--low-priority-color)';
-            bodyElement.style.borderLeft = '5px solid var(--low-priority-color)';
+            headerElement.style.borderLeft = '6px solid var(--low-priority-color)';
+            bodyElement.style.borderLeft = '6px solid var(--low-priority-color)';
         }
 
         if(selectedOption === 'medium') {
-            headerElement.style.borderLeft = '5px solid var(--medium-priority-color)';
-            bodyElement.style.borderLeft = '5px solid var(--medium-priority-color)';
+            headerElement.style.borderLeft = '6px solid var(--medium-priority-color)';
+            bodyElement.style.borderLeft = '6px solid var(--medium-priority-color)';
         }
 
         if(selectedOption === 'high') {
-            headerElement.style.borderLeft = '5px solid var(--high-priority-color)';
-            bodyElement.style.borderLeft = '5px solid var(--high-priority-color)';
+            headerElement.style.borderLeft = '6px solid var(--high-priority-color)';
+            bodyElement.style.borderLeft = '6px solid var(--high-priority-color)';
         }
     }
 })
