@@ -16,6 +16,9 @@
     --main-mainpanel-color: #161a1d;
     --main-text-color: #e3e3e3;
     --main-hover-color: #2a2e31;
+    --low-priority-color: #2196f3;
+    --medium-priority-color: #f18701;
+    --high-priority-color: #da0100;
 }
 
 html, body {
