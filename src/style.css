@@ -194,8 +194,8 @@ h1, h2 , li {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 4px solid var(--main-sidepanel-color);
-    border-right: 4px solid var(--main-sidepanel-color);
+    border-left: 5px solid var(--main-sidepanel-color);
+    border-right: 5px solid var(--main-sidepanel-color);
 }
 
 .todo-item-header > div {
@@ -234,8 +234,8 @@ h1, h2 , li {
     display: flex;
     background-color: var(--main-sidepanel-color);
     display: none;
-    border-left: 4px solid var(--main-sidepanel-color);
-    border-right: 4px solid var(--main-sidepanel-color);
+    border-left: 5px solid var(--main-sidepanel-color);
+    border-right: 5px solid var(--main-sidepanel-color);
 }
 
 .notes-area {
