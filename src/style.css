@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../src/assets/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'MyFont';
     font-weight: bold;
 }
 
@@ -106,7 +112,7 @@ h1, h2 , li {
 
 #project-list-header {
     color: var(--main-text-color);
-    font-size: 14px;
+    font-size: 12px;
     margin-right: auto;
     padding: 5px 20px 5px 20px;
     color: gray;
@@ -119,7 +125,7 @@ h1, h2 , li {
 
 #project-todo-list > li {
     list-style: none;
-    height: 40px;
+    height: 20px;
     width: 210px;
     min-width: 210px;
     word-spacing: 2px;
@@ -130,6 +136,10 @@ h1, h2 , li {
     align-items: center;
     padding: 20px;
     font-size: 17px;
+}
+
+.todo-project-name > a {
+    font-weight: lighter;
 }
 
 #project-todo-list > li:hover {
@@ -276,12 +286,12 @@ h1, h2 , li {
 }
 
 .due-date-input {
-    width: 115px;
+    width: 120px;
     padding: 5px;
 }
 
 .priority-select-panel {
-    width: 285px;
+    width: 290px;
     height: 40px;
     color: #fff;
     background-color: var(--main-mainpanel-color);
