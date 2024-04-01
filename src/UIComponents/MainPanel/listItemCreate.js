@@ -1,3 +1,5 @@
+import { loadExpandDownBtn } from '../loadSVG';
+
 // Function for creating <li> for Todo Project sub items / tasks 
 export function listPopulate(value) {
     // Create <li>
@@ -74,8 +76,8 @@ function createTextElement(title) {
 // Expand button creation for Todo Project sub items / tasks
 function expandButtonPopulate() {
     const button = document.createElement('button');
-    button.classList.add('todo-list-item-expand-btn');
-    button.textContent = '+';
+    button.classList.add('expand-btn-container');
+    loadExpandDownBtn(button);
 
     return button;
 }

@@ -208,8 +208,19 @@ h1, h2 , li {
     width: 1000px;
 }
 
-.todo-list-item-expand-btn {
+.expand-btn-container {
+    background: none;
+    border: none;
+    margin-left: 5px;
+}
+
+.expand-btn-container > img {
     cursor: pointer;
+    background: url(../src/assets/expand-down.svg);
+    height: 23px;
+    cursor: pointer;
+    filter: invert(100%);
+    margin-top: 5px;
 }
 
 .todo-item-header {
@@ -239,10 +250,6 @@ h1, h2 , li {
 
 .date-container {
     margin-left: auto;
-}
-
-.expand-btn {
-    margin-left: 10px;
 }
 
 .todo-list-item-checkbox-btn {
