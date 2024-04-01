@@ -1,4 +1,5 @@
 import fileCheck from '../assets/file-check.svg';
+import delBtn from '../assets/delete.svg';
 
 export function loadSVG() {
     loadHeaderSVG();
@@ -12,4 +13,11 @@ function loadHeaderSVG() {
     headerSlot.appendChild(myIcon);
 
     return headerSlot;
+}
+
+export function loadDeleteBtnSVG(element) {
+    const delIcon = new Image();
+    delIcon.src = delBtn;
+
+    element.appendChild(delIcon);
 }

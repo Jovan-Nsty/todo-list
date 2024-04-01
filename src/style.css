@@ -149,10 +149,31 @@ h1, h2 , li {
     font-weight: lighter;
 }
 
+.todo-project-delete-btn-container {
+    display: none; 
+}
+
+.del-btn {
+    background: none;
+    border: none;
+}
+
+.del-btn > img{
+    background: url(../src/assets/delete.svg);
+    height: 23px;
+    cursor: pointer;
+    filter: invert(100%);
+    margin-top: 5px;
+}
+
 #project-todo-list > li:hover {
     cursor: pointer;
     color: #fff;
     background-color: var(--main-hover-color);
+}
+
+#project-todo-list > li:hover .todo-project-delete-btn-container {
+    display: block; 
 }
 
 #todo-add-btn > span,
