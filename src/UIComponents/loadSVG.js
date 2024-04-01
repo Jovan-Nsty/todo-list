@@ -3,12 +3,8 @@ import delBtn from '../assets/delete.svg';
 import expandDownBtn from '../assets/expand-down.svg';
 import expandUpBtn from '../assets/expand-up.svg';
 
-export function loadSVG() {
-    loadHeaderSVG();
-}
-
 // Function for loading the main SVG on <h1>
-function loadHeaderSVG() {
+export function loadHeaderSVG() {
     const myIcon = new Image();
     myIcon.src = fileCheck;
 
