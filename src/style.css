@@ -223,6 +223,10 @@ h1, h2 , li {
     margin-top: 5px;
 }
 
+.expand-btn-container.down > img {
+    background: url(../src/assets/expand-up.svg);
+}
+
 .todo-item-header {
     height: 50px;
     padding: 10px;
