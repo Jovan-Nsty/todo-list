@@ -8,12 +8,18 @@ export function updateContent() {
     
     // On each Todo Project click, form is created and <ul> list is created
     function handleClick(event) {
-        const clickedListItem = event.target.closest('li.li-item');
+        const closeButton = event.target.closest('.del-btn');
+
+        if(closeButton) {
+            return;
+        } else {
+            const clickedListItem = event.target.closest('li.li-item');
         
-        if(clickedListItem) {
-            content.textContent = '';
-            content.appendChild(formCreate());
-            content.appendChild(listContainer());
+            if(clickedListItem) {
+                content.textContent = '';
+                content.appendChild(formCreate());
+                content.appendChild(listContainer());
+            }
         }
     }
 

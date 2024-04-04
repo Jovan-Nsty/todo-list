@@ -3,10 +3,16 @@ export function titleUpdate() {
     const todoList = document.getElementById('project-todo-list');
 
     function handleClick(event) {
-        const clickedListItem = event.target.closest('li.li-item');
+        const closeButton = event.target.closest('.del-btn');
 
-        if(clickedListItem) {
-            title.textContent = clickedListItem.textContent;
+        if(closeButton) {
+            return;
+        } else {
+            const clickedListItem = event.target.closest('li.li-item');
+
+            if(clickedListItem) {
+                title.textContent = clickedListItem.textContent;
+            }
         }
     }
 

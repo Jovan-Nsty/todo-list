@@ -8,7 +8,6 @@ const form = document.getElementById('todo-form');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
-
     // Grabbing the form input value
     const inputValue = document.getElementById('todo-name').value;
     // Creating Todo Project with the form input value
