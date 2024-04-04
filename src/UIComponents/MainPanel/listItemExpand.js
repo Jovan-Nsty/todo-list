@@ -1,3 +1,4 @@
+// Module for Todo Project sub task body visibility 
 document.getElementById('todo-list-items').addEventListener('click', event => {
     if(event.target.classList.contains('todo-list-item-expand-btn')) {
         const listItem = event.target.closest('.todo-item');

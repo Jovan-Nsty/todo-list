@@ -5,6 +5,8 @@ export function titleUpdate() {
     function handleClick(event) {
         const closeButton = event.target.closest('.del-btn');
 
+        // If todo project delete button is clicked: return, else update main panel title content
+
         if(closeButton) {
             return;
         } else {

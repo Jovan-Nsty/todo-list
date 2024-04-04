@@ -1,5 +1,4 @@
 // Module for storing and manipulating todo projects - add/delete
-
 export let todosArray = [];
 
 export const addTodoToArray = obj => {
