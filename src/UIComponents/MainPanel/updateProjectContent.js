@@ -1,6 +1,6 @@
 import { formCreate } from "./formCreate";
 import { formSubmit } from "./formSubmit";
-import { removeWelcomeMessage } from './removeWelcomeMsg'
+import { removeWelcomeMessage } from './removeWelcomeMsg';
 
 // Function for individual Todo Project to render form and list items (Todo Project sub tasks)
 export function updateContent() {
