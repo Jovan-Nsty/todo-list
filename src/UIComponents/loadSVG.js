@@ -14,6 +14,17 @@ export function loadHeaderSVG() {
     return headerSlot;
 }
 
+export function loadWelcomeSVG() {
+    const myIcon = new Image();
+    myIcon.src = fileCheck;
+
+    const welcomeSlot = document.getElementById('welcome-logo');
+
+    welcomeSlot.appendChild(myIcon);
+
+    return welcomeSlot;
+}
+
 // Function for loading <li> Todo Projecs delete button SVG
 export function loadDeleteBtnSVG(element) {
     const delIcon = new Image();

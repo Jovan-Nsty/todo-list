@@ -1,5 +1,6 @@
 import { formCreate } from "./formCreate";
 import { formSubmit } from "./formSubmit";
+import { removeWelcomeMessage } from './removeWelcomeMsg'
 
 // Function for individual Todo Project to render form and list items (Todo Project sub tasks)
 export function updateContent() {
@@ -18,6 +19,7 @@ export function updateContent() {
             const clickedListItem = event.target.closest('li.li-item');
         
             if(clickedListItem) {
+                removeWelcomeMessage()
                 content.textContent = '';
                 content.appendChild(formCreate());
                 content.appendChild(listContainer());

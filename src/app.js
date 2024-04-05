@@ -10,7 +10,7 @@ import './UIComponents/MainPanel/listItemExpand.js';
 import './UIComponents/MainPanel/taskPriorityUpdate.js';
 import './UIComponents/MainPanel/updateDueDate.js';
 import './UIComponents/loadSVG.js';
-import { loadHeaderSVG } from './UIComponents/loadSVG.js';
+import { loadHeaderSVG, loadWelcomeSVG } from './UIComponents/loadSVG.js';
 
 // Creating a default 'personal' todo list on page load
 createTodoProject('Personal');
@@ -18,5 +18,8 @@ createTodoProject('Personal');
 // Print all available todo projects
 printTodoArray(todosArray);
 
-// Load SVG's for <h1> on page load
+// Load SVG for <h1> on page load
 loadHeaderSVG()
+
+// Load SVG for welcome message
+loadWelcomeSVG();
